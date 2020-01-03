@@ -1,0 +1,20 @@
+@page "/deepviewer"
+@inherits DeepViewerComponent
+@using Microsoft.AspNetCore.Components.Web
+
+<h4>Sample tape</h4>
+<form class="form-inline">
+    <div class="input-append">
+        <input type="text" id="secret-key" placeholder="Secret key" @bind=@SecretKey />
+        <input type="text" id="publishable-key" placeholder="Publishable key" @bind=@PublishableKey />
+        <input type="text" name="group-name" id="group-name" placeholder="Stock symbol" @bind=@StockSymbol />
+        <input type="button" id="subscribe" class="btn" value="Subscribe" @onclick=@Subscribe />
+    </div>
+</form>
+
+<ul id="message-list">
+    @foreach (var msg in Messages)
+    {
+        <li>@msg</li>
+    }
+</ul>

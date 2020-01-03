@@ -1,0 +1,3 @@
+[submodule "IEXSharp"]
+	path = IEXSharp
+	url = https://github.com/vslee/IEXSharp.git
